@@ -8,23 +8,43 @@
   --accent-2: #FF6B6B;     /* secondary accent / hover */
   --muted: #6B6A6A;        /* muted paragraph text */
   --white: #ffffff;
+  --black: #000000;
 }
 
 /* General styling rules */
 body {
     font-family: 'Lora', serif;
-    background-color: var(--bg);
+    background-color: var(white);
     font-size: 1rem;               
     line-height: 1.6;
     padding-top: calc(1.25rem * 2 + 1.5rem);               
 }
 
 section {
-    padding: 3.75rem 1.25rem;
+  box-sizing: border-box;
 }
 
 #hero, #about, #services, #gallery {
-  border-bottom: 0.25rem solid var(--primary);
+  border-bottom: 4px solid var(--primary);
+}
+
+#hero, #about, #services, #gallery {
+  margin: 0 1.25rem;
+}
+
+
+#about, #gallery {
+  background-color: var(--bg-tertiary);
+}
+
+.service, figure, .testimonial {
+  border: 2px solid var(--accent);
+  transition: border-color .18s ease, transform .12s ease;
+}
+
+.service:hover, figure:hover, .testimonial:hover {
+  border-color: var(--accent-2);
+  transform: translateY(-4px);
 }
 
 #contact {
@@ -42,6 +62,8 @@ h1, h2, .contact-title, .contact-subtitle {
 }
 
 h1 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
     font-size: 3.5rem;
     letter-spacing: 1px;
 }
@@ -52,32 +74,38 @@ h2 {
     margin-bottom: 1.25rem;
 }
 
+section h2 {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+
 h3, h4 {
-    color: black;
+  color: black;
 }
 
 h3 {
-    font-size: 1.5rem;
-    letter-spacing: 0.3px;
-    margin-bottom: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 15px;
 }
 
 h4 {
-    font-size: 1.25rem;
-    letter-spacing: 0.2px;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
 }
 
 h5 {
-    font-size: 1rem;
-    letter-spacing: 0;
+  font-size: 1rem;
+  letter-spacing: 0;
 }
 
 p, li, input, textarea, label, button {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 p, .service-description, .testimonial-quote {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 p {
@@ -85,9 +113,15 @@ p {
 }
 
 a {
+  color: var(--primary);
   text-decoration: underline;
-  color: var(--white);
+  text-decoration-color: var(--accent);
   transition: color 0.3s ease;
+}
+
+.nav a, #contact a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 a:hover {
@@ -135,7 +169,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 /* Navbar styling rules */
 .nav {
     position: fixed;
-    background-color: #0C1A2B;
+    background-color: var(--bg-secondary);
     padding: 1.25rem;
     top: 0;
     left: 0;
@@ -159,12 +193,28 @@ a:focus, button:focus, input:focus, textarea:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1.25rem;
     height: 100vh;
+}
+
+.hero-subtitle {
+  text-decoration: none;
+  color: var(--accent-2);
 }
 
 .hero-subhead {
     font-weight: bold;
+}
+
+.button { 
+  display:inline-block; padding:.6rem 1rem; border-radius:8px; text-decoration:none; 
+}
+
+.hero-button {
+  background:var(--accent); color:var(--white); 
+}
+
+.hero-button:hover { 
+  background:var(--accent-2); 
 }
 
 /* About section styling rules */
@@ -173,7 +223,6 @@ a:focus, button:focus, input:focus, textarea:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1.25rem;
     padding: 0.625rem;
   }
   
@@ -190,10 +239,11 @@ a:focus, button:focus, input:focus, textarea:focus {
 .about-image img {
     height: auto;
     object-fit: cover;
+    border: 2px solid var(--accent);
     width: 100%;
     max-width: 250px;
     border-radius: 0.625rem;
-    box-shadow: 0px 4px 0.625rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem -0.5rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .about-paras {
@@ -206,7 +256,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 /* Services section styling rules */
 #services {
     text-align: center;
-    margin: 1.25rem;
+    padding: 0.625rem;
 }
 
 .services {
@@ -219,10 +269,13 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .service {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    background-color: var(--bg-primary);
+    box-shadow: -0.5rem -0.5rem 0.625rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
     margin: 0.625rem;
     padding: 1.25rem;
     height: 100%;
@@ -231,16 +284,16 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 .service-subtitle {
     font-weight: bold;
+    color: var(--accent-2);
 }
 
 .fine-print {
-    font-style: italic;
-    font-size: 0.7em;
+  font-style: italic;
+  font-size: 0.7em;
 }
 
 /* Gallery section styling rules */
 #gallery {
-    margin: 1.25rem;
     padding: 0.625rem;
 }
 
@@ -257,16 +310,23 @@ a:focus, button:focus, input:focus, textarea:focus {
     box-sizing: border-box;
     width: 100%;
     aspect-ratio: 1 / 1;
-    border-radius: 6px;
+    border-radius: 0.625rem;
+}
+
+figure {
+    background-color: var(--white);
+    box-shadow: 0.5rem -0.5rem 0.625rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
+    padding: 0.625rem;
 }
 
 /* Testimonials section styling rules */
 #testimonials {
-    margin: 1.25rem;
+    padding: 0.625rem;
 }
 
 .testimonials {
-    display: flex;
+  display: flex;
     flex-wrap: wrap;
     margin: 30px;
 }
@@ -281,38 +341,46 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .testimonial {
+    background-color: var(--bg-primary);
+    box-shadow: -0.5rem -0.5rem 0.625rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
     margin: 0.625rem;
     flex: 1;
-}
-
-blockquote p {
+  }
+  
+  blockquote p {
     font-style: italic;
     font-size: 1.1rem;
     line-height: 1.8;
     margin: 0;
-}
-
-/* Contact section styling rules */
-#contact {
+  }
+  
+  /* Contact section styling rules */
+  #contact {
     margin: 1.25rem;
     color: var(--white);
-}
-
-.contact-title, .contact-para {
+  }
+  
+  .contact-title, .contact-para {
     text-align: center;
     color: var(--white);
-}
-
-.contact-subtitle {
-  color: var(--white);
-}
-
-.contact-info {
+  }
+  
+  .contact-subtitle {
+    color: var(--white);
+  }
+  
+  .contact-info {
     display: flex;
     justify-content: space-evenly;
-}
+  }
 
-.social-links-list .social-links {
+  #contact a {
+    text-decoration: none;
+    color: var(--accent);
+  }
+  
+  .social-links-list .social-links {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -326,8 +394,9 @@ form {
 }
 
 .contact-form {
-    margin: 1.25rem;
-    padding: 1.25rem;
+  border: 2px solid var(--accent);
+  margin: 1.25rem;
+  padding: 1.25rem;
 }
 
 .form-row {

@@ -29,7 +29,7 @@
             </nav>
         </header>
 
-        <main>
+        <main id="main-content">
             <!-- Hero section -->
             <section id="hero">
                 <div class="hero-content">
@@ -37,6 +37,7 @@
                     <p class="hero-subhead">James Tattoos - Houston, TX</p>
                     <h2 class="hero-subtitle">LET'S INK YOUR STORY.</h2>
                     <p class="hero-subhead">Custom ink designed to bring your stories to life.</p>
+                    <a class="button hero-button" href="#contact">Book a Consult</a>
                 </div>
             </section>
 
@@ -44,7 +45,7 @@
             <section id="about">
                 <h2 class="about-title">MY STORY</h2>
                 <div class="about-content">
-                    <div class="about-image">
+                    <div class="about-image mute-border">
                         <img src="assets/images/JamesTattoosPortrait.png" alt="James, Tattoo Artist" class="about-img">
                     </div>
                     <div class="about-paras">
@@ -167,9 +168,9 @@
             <h2 class="contact-title">LET'S CONNECT.</h2>
                 <p class="contact-para">Whether you're ready to book or just have a question-hit us up.</p>
                 <div class="contact-info">
-                    <p class="contact-detail">Location: Houston, TX</p>
-                    <p class="contact-detail">Call/Text: (555)555-5555</p>
-                    <p class="contact-detail">Email: slowwave@ink.com</p>
+                    <p class="contact-detail">Location: <a href="http://maps.google.com/?q=Houston,Texas" target="_blank">Houston, TX</a></p>
+                    <p class="contact-detail">Call/Text: <a href=tel:+15555555555>(555)555-5555</a></p>
+                    <p class="contact-detail">Email: <a href=mailto:slowwave@ink.com>slowwave@ink.com</a></p>
                 </div>
                 <h3 class="contact-subtitle">Follow us on social media:</h3>
                 <div class="social-links-list">
@@ -201,7 +202,7 @@
                             <label for="message">Message:</label>
                             <textarea id="message" name="message" rows="4" placeholder="What's your question?" required></textarea>
                         </div>
-                        <button type="submit">Send Message</button>
+                        <button class="button contact-form-button" type="submit">Send Message</button>
                     </form>
                 </div>
         </footer>
