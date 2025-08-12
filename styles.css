@@ -1,6 +1,19 @@
+/* CSS variables for color scheme */
+:root{
+  --bg-primary: #FDF6E3;   /* primary background */
+  --bg-secondary: #0C1A2B; /* secondary background */
+  --bg-tertiary: #CED6E0;  /* tertiary background */
+  --primary: #0C1A2B;      /* primary text/headings */
+  --accent: #F6B93B;       /* buttons, links */
+  --accent-2: #FF6B6B;     /* secondary accent / hover */
+  --muted: #6B6A6A;        /* muted paragraph text */
+  --white: #ffffff;
+}
+
 /* General styling rules */
 body {
     font-family: 'Lora', serif;
+    background-color: var(--bg);
     font-size: 1rem;               
     line-height: 1.6;
     padding-top: calc(1.25rem * 2 + 1.5rem);               
@@ -8,6 +21,14 @@ body {
 
 section {
     padding: 3.75rem 1.25rem;
+}
+
+#hero, #about, #services, #gallery {
+  border-bottom: 0.25rem solid var(--primary);
+}
+
+#contact {
+  background-color: var(--bg-secondary);
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,12 +85,13 @@ p {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: var(--white);
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: gray;
+  color: var(--muted);
 }
 
 a:focus, button:focus, input:focus, textarea:focus {
@@ -113,6 +135,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 /* Navbar styling rules */
 .nav {
     position: fixed;
+    background-color: #0C1A2B;
     padding: 1.25rem;
     top: 0;
     left: 0;
@@ -152,9 +175,9 @@ a:focus, button:focus, input:focus, textarea:focus {
     justify-content: center;
     margin: 1.25rem;
     padding: 0.625rem;
-}
-
-.about-content {
+  }
+  
+  .about-content {
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
@@ -272,10 +295,16 @@ blockquote p {
 /* Contact section styling rules */
 #contact {
     margin: 1.25rem;
+    color: var(--white);
 }
 
 .contact-title, .contact-para {
     text-align: center;
+    color: var(--white);
+}
+
+.contact-subtitle {
+  color: var(--white);
 }
 
 .contact-info {
