@@ -1,7 +1,7 @@
 /* CSS variables for color scheme */
 :root{
   --bg-primary: #FDF6E3;   /* primary background */
-  --bg-secondary: #0C1A2B; /* secondary background */
+  --bg-secondary: 12, 26, 43; /* secondary background in rgb */
   --bg-tertiary: #CED6E0;  /* tertiary background */
   --primary: #0C1A2B;      /* primary text/headings */
   --accent: #F6B93B;       /* buttons, links */
@@ -48,7 +48,7 @@ section {
 }
 
 #contact {
-  background-color: var(--bg-secondary);
+  background-color: rgb(var(--bg-secondary));
 }
 
 h1, h2, h3, h4, h5 {
@@ -117,7 +117,7 @@ a {
   color: var(--primary);
   text-decoration: underline;
   text-decoration-color: var(--accent);
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 .nav a, #contact a {
@@ -130,7 +130,7 @@ a:hover {
 }
 
 a:focus, button:focus, input:focus, textarea:focus {
-  outline: 3px solid black;
+  outline: 3px solid var(--accent-2);
   outline-offset: 3px;
 }
 
@@ -170,12 +170,18 @@ a:focus, button:focus, input:focus, textarea:focus {
 /* Navbar styling rules */
 .nav {
     position: fixed;
-    background-color: var(--bg-secondary);
-    padding: 1.25rem;
+    background-color: rgb(var(--bg-secondary));
+    backdrop-filter: blur(8px);
+    transition: background-color 0.5s ease;
+    padding: 0.75rem 1.25rem;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
+}
+
+.nav.scrolled {
+    background-color: rgba(var(--bg-secondary), 0.7); /* lighter on scroll */
 }
 
 .nav-list {
@@ -185,6 +191,30 @@ a:focus, button:focus, input:focus, textarea:focus {
     gap: 1.25rem;
     margin: 0;
     padding: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-link:hover, .nav-link:focus {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    transition: text-decoration-color 1s ease;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
 }
 
 /* Hero section styling rules */
@@ -481,6 +511,41 @@ form {
 
   h3 {
     font-size: 1.25rem;
+  }
+
+  /* Hamburger menu navbar */
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-list {
+    flex-direction: column;  /* stacked vertically for mobile */
+    background-color: rgba(var(--bg-secondary), 0.95);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    pointer-events: none; /* prevent interaction when closed */
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .nav-list.open {
+    pointer-events: auto; /* allow interaction when open */
+    max-height: 500px; /* enough space for all items */
+    opacity: 1;
+  }
+
+  .nav-link {
+    padding: 0.75rem 0;
+  }
+
+  .nav-toggle {
+    display: block;
   }
 
   /* Hero section spacing */
