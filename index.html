@@ -43,10 +43,10 @@
             </section>
 
             <!-- About section -->
-            <section id="about">
-                <h2 class="about-title">MY STORY</h2>
-                <div class="about-content">
-                    <div class="about-image mute-border">
+            <section id="about" aria-labelledby="about-title">
+                <h2 id="about-title" class="about-title">MY STORY</h2>
+                <div class="about-content fade-in">
+                    <div class="about-image">
                         <img src="assets/images/JamesTattoosPortrait.png" alt="James, Tattoo Artist" class="about-img">
                     </div>
                     <div class="about-paras">
@@ -208,49 +208,7 @@
                 </div>
         </footer>
 
-        <!-- Script for toggling darker background of navbar upon scrolling past hero section -->
-        <script>
-            window.addEventListener('scroll', function() {
-                const nav = document.querySelector('.nav');
-                if (window.scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-        </script>
-
-        <!-- Script for toggling link underlining on current section -->
-        <script>
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 80; // adjust for nav height
-                    if (pageYOffset >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
-                });
-            });
-        </script>
-
-        <!-- Script for toggling mobile navigation -->
-        <script>
-            const toggleBtn = document.querySelector('.nav-toggle');
-            const navList = document.querySelector('.nav-list');
-
-            toggleBtn.addEventListener('click', () => {
-                navList.classList.toggle('open');
-            });
-        </script>
+        <!-- Link to script.js -->
+        <script src="script.js"></script>
     </body>
 </html>
