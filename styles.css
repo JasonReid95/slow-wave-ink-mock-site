@@ -18,11 +18,11 @@
 
 /* General styling rules */
 body {
-    font-family: 'Lora', serif;
-    background-color: var(white);
-    font-size: var(--space-md);               
-    line-height: 1.6;
-    padding-top: calc(var(--space-lg) * 2 + var(--space-lg));               
+  font-family: 'Lora', serif;
+  background-color: var(white);
+  font-size: var(--space-md);               
+  line-height: 1.6;
+  padding-top: calc(var(--space-lg) * 2 + var(--space-lg));               
 }
 
 section {
@@ -62,27 +62,27 @@ section {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
+  font-family: 'Unica One', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 h1, h2, .contact-title, .contact-subtitle {
-    color: black ;
+  color: black ;
 }
 
 h1 {
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    color: var(--white);
-    font-size: 3.5rem;
-    letter-spacing: 1px;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  color: var(--white);
+  font-size: 3.5rem;
+  letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 2.25rem;
-    letter-spacing: 0.5px;
-    margin-bottom: var(--space-lg);
+  font-size: 2.25rem;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-lg);
 }
 
 section h2 {
@@ -120,7 +120,7 @@ p, .service-description, .testimonial-quote {
 }
 
 p {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 a {
@@ -158,13 +158,13 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* Skip link styling rules */
 .skip-link {
-    position: absolute;
-    top: auto;
-    overflow: hidden;
-    color: black;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  color: black;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
 }
 
 .skip-link:focus {
@@ -179,28 +179,28 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* Navbar styling rules */
 .nav {
-    position: fixed;
-    background-color: rgb(var(--bg-secondary));
-    backdrop-filter: blur(8px);
-    transition: background-color 0.5s ease;
-    padding: var(--space-md) var(--space-lg);
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
+  position: fixed;
+  background-color: rgb(var(--bg-secondary));
+  backdrop-filter: blur(8px);
+  transition: background-color 0.5s ease;
+  padding: var(--space-md) var(--space-lg);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 .nav.scrolled {
-    background-color: rgba(var(--bg-secondary), 0.7); /* lighter on scroll */
+  background-color: rgba(var(--bg-secondary), 0.7); /* lighter on scroll */
 }
 
 .nav-list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    gap: var(--space-lg);
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
@@ -209,35 +209,35 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .nav-link:hover, .nav-link:focus {
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    transition: text-decoration-color 1s ease;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  transition: text-decoration-color 1s ease;
 }
 
 .nav-link.active {
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
 }
 
 .nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: var(--space-lg);
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: var(--space-lg);
 }
 
 /* Hero section styling rules */
 #hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url(assets/images/tattoo-studio.jpg);
-    background-size: cover;
-    color: var(--white);
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(assets/images/tattoo-studio.jpg);
+  background-size: cover;
+  color: var(--white);
+  height: 100vh;
 }
 
 .hero-content h1, .hero-content h2, .hero-content p {
@@ -266,42 +266,42 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* About section styling rules */
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-sm);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm);
+}
   
-  .about-content {
-    display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
-    gap: 3rem;
-    width: 100%;
-    max-width: 60rem;
-    padding: var(--space-lg);
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 3rem;
+  width: 100%;
+  max-width: 60rem;
+  padding: var(--space-lg);
 }
 
 .about-img {
-    height: auto;
-    object-fit: cover;
-    border: 2px solid var(--accent);
-    width: 100%;
-    max-width: 320px;
-    border-radius: var(--space-sm);
-    box-shadow: -var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
+  height: auto;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--space-sm);
+  box-shadow: -var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
 }
 
 .about-paras {
-    display: flex;
-    flex-direction: column;
-    color: var(--primary);
-    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.35),
-             -0.5px -0.5px 1px rgba(255,255,255,0.1);
-    max-width: 40ch;
-    flex: 1;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  color: var(--primary);
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.35),
+           -0.5px -0.5px 1px rgba(255,255,255,0.1);
+  max-width: 40ch;
+  flex: 1;
+  gap: 15px;
 }
 
 .fade-in {
@@ -317,31 +317,31 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* Services section styling rules */
 #services {
-    text-align: center;
-    padding: var(--space-sm);
+  text-align: center;
+  padding: var(--space-sm);
 }
 
 .services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: var(--space-sm);
-    padding: var(--space-sm);
-    gap: var(--space-sm);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: var(--space-sm);
+  padding: var(--space-sm);
+  gap: var(--space-sm);
 }
 
 .service {
   display: flex;
   flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    background-color: var(--bg-primary);
-    box-shadow: var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
-    border-radius: var(--space-sm);
-    margin: var(--space-sm);
-    padding: var(--space-lg);
-    height: 100%;
-    flex: 1;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+  box-shadow: var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
+  border-radius: var(--space-sm);
+  margin: var(--space-sm);
+  padding: var(--space-lg);
+  height: 100%;
+  flex: 1;
 }
 
 .service:focus {
@@ -350,8 +350,8 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .service-subtitle {
-    font-weight: bold;
-    color: var(--accent-2);
+  font-weight: bold;
+  color: var(--accent-2);
 }
 
 .fine-print {
@@ -362,101 +362,102 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* Gallery section styling rules */
 #gallery {
-    padding: var(--space-lg) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
 }
 
 .gallery-image {
-    height: auto;
-    object-fit: cover;
-    box-sizing: border-box;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: var(--space-sm);
+  height: auto;
+  object-fit: cover;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--space-sm);
 }
 
 .gallery-caption {
-    font-size: var(--space-md);
-    color: var(--text-secondary);
-    margin-top: var(--space-xs);
-    text-align: center;
+  font-size: var(--space-md);
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+  text-align: center;
 }
 
 figure {
-    background-color: var(--white);
-    overflow: hidden;
-    box-shadow: -var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
-    border-radius: var(--space-sm);
-    padding: var(--space-sm);
+  background-color: var(--white);
+  overflow: hidden;
+  box-shadow: -var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
+  border-radius: var(--space-sm);
+  padding: var(--space-sm);
 }
 
 /* Testimonials section styling rules */
 #testimonials {
-    padding: var(--space-lg) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
 }
 
 .testimonials {
   display: flex;
-    flex-wrap: wrap;
-    margin: var(--space-lg) 0;
-    gap: var(--space-md);
+  flex-wrap: wrap;
+  margin: var(--space-lg) 0;
+  gap: var(--space-md);
 }
 
 .testimonials-title {
-    text-align: center;
-    margin-bottom: var(--space-sm);
+  text-align: center;
+  margin-bottom: var(--space-sm);
 }
 
 .testimonials-subtitle {
-    margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .testimonial {
-    background-color: var(--bg-primary);
-    color: var(--primary);
-    box-shadow: var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
-    border-radius: var(--space-sm);
-    padding: var(--space-lg);
-    flex: 1 1 calc(25.2% - var(--space-md));
-    max-width: calc(25.2% - var(--space-md));
-    box-sizing: border-box;  
+  background-color: var(--bg-primary);
+  color: var(--primary);
+  box-shadow: var(--space-md) -var(--space-md) var(--space-sm) rgba(0, 0, 0, 0.2);
+  border-radius: var(--space-sm);
+  padding: var(--space-lg);
+  flex: 1 1 calc(25.2% - var(--space-md));
+  max-width: calc(25.2% - var(--space-md));
+  box-sizing: border-box;  
 }
 
 .testimonial-author {
-    margin-top: var(--space-sm);
-    color: var(--muted);
-    font-weight: 600;
+  margin-top: var(--space-sm);
+  color: var(--muted);
+  font-weight: 600;
 }
 
 blockquote {
-    margin: 0;
+  margin: 0;
 }
   
 blockquote p {
-    font-style: italic;
-    font-size: var(--space-md);
-    line-height: 1.8;
-    margin: 0;}
+  font-style: italic;
+  font-size: var(--space-md);
+  line-height: 1.8;
+  margin: 0;
+}
 
 .testimonial-quote::before, .testimonial-quote::after {
-    content: "";
+  content: "";
 }
   
  /* Contact section styling rules */
 #contact {
-    margin: var(--space-lg);
-    padding: var(--space-md);
-    color: var(--white);
+  margin: var(--space-lg);
+  padding: var(--space-md);
+  color: var(--white);
 }
   
 .contact-title, .contact-para {
-    text-align: center;
-    color: var(--white);
+  text-align: center;
+  color: var(--white);
 }
   
 .contact-subtitle {
@@ -465,26 +466,26 @@ blockquote p {
 }
   
 .contact-info {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #contact a {
-    text-decoration: none;
-    color: var(--accent);
+  text-decoration: none;
+  color: var(--accent);
 }
   
 .social-links-list .social-links {
-    list-style-type: none;
-    padding: 0;
-    margin: var(--space-md);
+  list-style-type: none;
+  padding: 0;
+  margin: var(--space-md);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .contact-form {
@@ -500,8 +501,8 @@ form {
 }
 
 .form-row {
-    display: flex;
-    gap: var(--space-sm);
+  display: flex;
+  gap: var(--space-sm);
 }
 
 /* Script for users who opt out of motion */
