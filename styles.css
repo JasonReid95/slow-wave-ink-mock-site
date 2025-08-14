@@ -37,7 +37,7 @@ section {
   background-color: var(--bg-tertiary);
 }
 
-.about-img:hover, figure:hover {
+.about-img:hover, figure:hover, .service:hover, .testimonial:hover  {
   border-color: var(--accent-2);
   transform: scale(1.03);
 }
@@ -47,9 +47,8 @@ section {
   transition: border-color .18s ease, transform .12s ease;
 }
 
-.service:hover, .testimonial:hover {
-  border-color: var(--accent-2);
-  transform: translateY(-4px);
+.service:hover {
+  box-shadow: 0.5rem -0.5rem 1rem rgba(0,0,0,0.25);
 }
 
 #contact {
@@ -336,6 +335,11 @@ a:focus, button:focus, input:focus, textarea:focus {
     flex: 1;
 }
 
+.service:focus {
+  border-color: var(--accent-2);
+  outline: 2px solid var(--accent-2);
+}
+
 .service-subtitle {
     font-weight: bold;
     color: var(--accent-2);
@@ -344,6 +348,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 .fine-print {
   font-style: italic;
   font-size: 0.7em;
+  color: rgba(50,50,50,0.9);
 }
 
 /* Gallery section styling rules */
